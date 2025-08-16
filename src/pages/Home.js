@@ -1,0 +1,39 @@
+import React from 'react'
+import Hero from '../components/hero/Hero'
+
+// import MedicalBoard from '../components/medical-board/MedicalBoard'
+// import New from '../components/NewsAndArticles'
+import InterCollabs from '../components/InterCollabs'
+// import SwiperSlider1 from '../components/others/SwiperSlider1'
+import LiveSessions from '../components/LiveSessions'
+import NewsAndArticles from '../components/NewsAndArticles'
+
+import Awards from '../components/Awards'
+// import AwardsSlider from '../components/awards-certification/AwardsSlider'
+import Testimonial from '../components/Testimonial'
+
+// import DoctorAppointmentTable from '../UI/DoctorAppointmentTable'
+
+// import BookingAppointment from '../UI/BookingAppointment'
+import Empowering from '../components/Empowering'
+import MedicalBoardPartnerHospitals from '../components/MedicalBoardPartnerHospitals'
+import HeroSlickSlider from '../components/hero/HeroSlickSlider'
+
+
+const Home = () => {
+  return (
+      <>
+      {/* <Hero /> */}
+      <HeroSlickSlider/>
+      <Empowering />
+      <MedicalBoardPartnerHospitals/> 
+      <InterCollabs />
+      <LiveSessions/> 
+      <NewsAndArticles />
+      <Awards />
+      <Testimonial /> 
+      </>
+  )
+}
+
+export default Home

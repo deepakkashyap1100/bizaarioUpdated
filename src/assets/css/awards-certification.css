@@ -1,0 +1,11 @@
+.awards-certification-section ul.react-multi-carousel-dot-list {
+    bottom: -42px;
+} 
+.awards-certification-section .react-multi-carousel-dot button{
+  background-color: rgb(209, 209, 209);
+  border-color: rgb(209, 209, 209);
+}
+.awards-certification-section .react-multi-carousel-dot--active button{
+  background-color: #f86f03;
+  border-color: #f86f03;
+}
