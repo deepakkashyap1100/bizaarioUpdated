@@ -22,6 +22,9 @@ import MedicalBoardPage from './pages/MedicalBoardPage';
 import NewsArticles from './pages/NewsArticles';
 import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import ArticleDetail from './components/ArticleDetail';
+// import { articleData } from './components/news-article-page/ArticleData';
+// import { cardsData } from './Data/LocalData';
 
 
 
@@ -59,6 +62,11 @@ export default function App() {
         {
           path: '/privacy-policy',
           element: <PrivacyPolicy />
+        },
+        {
+          path: '/news-articles/:id',
+          element: <ArticleDetail />,
+          // loader: cardsData
         },
 
       ]

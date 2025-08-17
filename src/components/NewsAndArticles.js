@@ -3,6 +3,8 @@ import "../assets/css/NewsAndArticles.css";
 
 import React, { useState } from "react";
 import { cardsData } from "../Data/LocalData";
+import { Link } from "react-router";
+import { NavLink } from "react-bootstrap";
 
 
 
@@ -61,7 +63,7 @@ const NewsAndArticles = () => {
 
           <div className="row g-3">
             {filteredCards.map((card, index) => (
-            <div className="col-lg-4 col-md-6 col-12 mb-md-0 mb-3" key={index}>
+            <div className="col-lg-4 col-md-6 col-12 mb-md-0 mb-3" key={card.id}>
               <div className="card border-0 shadow-sm h-100 rounded-4 p-3">
                 <img src={card.img} className="card-img-top " alt={card.title} />
                 <div className="pt-3">
@@ -70,9 +72,9 @@ const NewsAndArticles = () => {
                     If you ask yourself what are some of your deal-breakers, AKA
                     non-negotiables, when it comes to dating, there can be a lot
                     of things ranging...
-                    <a href="#" className="ms-4 fw-semi-bold read-more-btn  text-decoration-none">
+                    <NavLink  to={`news-articles/${card.id} `} className="ms-4 fw-semi-bold read-more-btn  text-decoration-none">
                       Read More
-                    </a>
+                    </NavLink>
                   </p>
                 </div>
               </div>
