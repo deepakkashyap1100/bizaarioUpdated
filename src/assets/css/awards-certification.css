@@ -64,7 +64,7 @@
   padding-inline: 6px;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:992px) {
 
   .awards-certification-section .slick-next-btn {
     right: 43%;
