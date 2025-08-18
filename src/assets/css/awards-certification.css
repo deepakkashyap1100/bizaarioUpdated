@@ -45,7 +45,7 @@
 
 .awards-certification-section .slick-prev-btn {
   position: absolute;
-  bottom: -46px;
+  bottom: -50px;
   left: 46%;
   padding: 4px;
   background-color: var(--secondary);
@@ -57,9 +57,32 @@
 .awards-certification-section .slick-next-btn {
   position: absolute;
   right: 46%;
-  bottom: -46px;
+  bottom: -50px;
   padding: 4px;
   background-color: var(--secondary);
   color: #ffffff;
   padding-inline: 6px;
+}
+
+@media screen and (max-width:991px) {
+
+  .awards-certification-section .slick-next-btn {
+    right: 43%;
+  }
+
+  .awards-certification-section .slick-prev-btn {
+    left: 43%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .awards-certification-section .slick-next-btn {
+    right: 40%;
+    bottom: -45px;
+  }
+
+  .awards-certification-section .slick-prev-btn {
+    left: 40%;
+    bottom: -45px;
+  }
 }
