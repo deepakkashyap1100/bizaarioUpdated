@@ -8,18 +8,20 @@ const HeroSlickSlider = () => {
  const settings = {
     dots: true,                // show navigation dots
     infinite: true,            // loop mode
-    speed: 2000,               // transition speed (1s)
+    speed: 1000,               // transition speed (1s)
     slidesToShow: 1,           // show one slide
     slidesToScroll: 1,         // scroll one at a time
-    fade: true,                // enable fade effect
+    fade: false,                // enable fade effect
     autoplay: true,            // auto play
-    autoplaySpeed: 2500,       // 2s per slide
-    pauseOnHover: false,       // keep autoplay even if hovered
+    autoplaySpeed: 4000,       // 2s per slide
+    pauseOnHover: true,       // keep autoplay even if hovered
     arrows: false              // hide prev/next arrows
   };
 
-  return (
-    <div className=" mx-auto mt-10 hero-slick-slider">
+    return (
+        <>
+      <div className="main-banner">
+    <div className=" mx-auto  hero-slick-slider">
       <Slider {...settings}>
             {sliderArray.map((element)=> {
                 return(
@@ -59,7 +61,9 @@ const HeroSlickSlider = () => {
             }
             )}
       </Slider>
-    </div>
+            </div>
+            </div>
+            </>
   );
 };
 

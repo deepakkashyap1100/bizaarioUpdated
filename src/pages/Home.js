@@ -17,15 +17,15 @@ import Testimonial from '../components/Testimonial'
 // import BookingAppointment from '../UI/BookingAppointment'
 import Empowering from '../components/Empowering'
 import MedicalBoardPartnerHospitals from '../components/MedicalBoardPartnerHospitals'
-// import HeroSlickSlider from '../components/hero/HeroSlickSlider'
+import HeroSlickSlider from '../components/hero/HeroSlickSlider'
 import Hero2 from '../components/hero/Hero2'
 
 
 const Home = () => {
   return (
       <>
-      <Hero2 />
-      {/* <HeroSlickSlider/> */}
+      {/* <Hero2 /> */}
+      <HeroSlickSlider/>
       <Empowering />
       <MedicalBoardPartnerHospitals/> 
       <InterCollabs />

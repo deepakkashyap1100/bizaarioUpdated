@@ -138,7 +138,7 @@ button.owl-next {
   background: transparent;
   text-align: center;
   white-space: nowrap;
-  max-width: 200px;
+  max-width: 100%
 }
 
 .hero-btns,
@@ -259,4 +259,46 @@ button.owl-next {
 
 .hero-slick-slider .slick-dots {
   bottom: -35px;
+}
+
+@media screen and (min-width: 1200px) {
+
+  .main-banner .hero-slick-slider .hero-btns .nav-btn-style2,
+  .main-banner .hero-slick-slider .hero-btns .nav-btn-style {
+    padding: 7px 24px;
+    font-size: 24px;
+    border: 2px solid var(--secondary)
+  }
+}
+
+@media screen and (min-width:991px) {
+
+  .nav-btn-style,
+  .nav-btn-style2 {
+    padding: 10px 40px
+  }
+
+  .pill-button {
+    padding: 16px 58px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pill-button strong {
+    font-weight: 600;
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width:991px) {
+  /* 
+  .hero-slick-slider .nav-btn-style,
+  .nav-btn-style2 {
+    padding: 10px 40px
+  } */
+
+  .main-banner .hero-slick-slider .pill-button {
+    padding: 13px 76px;
+  }
+
 }
