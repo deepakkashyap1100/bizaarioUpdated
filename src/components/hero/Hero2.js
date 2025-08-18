@@ -66,7 +66,7 @@ return (
                                             <a href="/" className="btn  nav-btn-style">Join Our Network</a>
                                         </div> 
                                     </div>
-                                    <div className="rounded-buttons mt-4 ">
+                                    <div className="rounded-buttons ">
                                         <div className="pill-button ">
                                             <strong>10,000+</strong> Hospitals connected
                                         </div>
