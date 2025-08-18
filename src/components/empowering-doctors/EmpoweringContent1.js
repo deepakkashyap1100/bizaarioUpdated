@@ -9,44 +9,15 @@ import 'swiper/css/scrollbar';
 import { A11y, Navigation, Scrollbar, Pagination, Autoplay, } from 'swiper/modules';
 
 const EmpoweringContent1 = () => {
-    // const options = {
-    //     dots: false,
-    //     nav: false,
-    //     autoplay: false,
-    //     mouseDrag: true,
-    //     smartSpeed: 2000,
-    //     loop: true,
-    //     center: true,
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-    //             margin: 10,
-    //             dots: true,
-    //         },
-    //         600: {
-    //             items: 1,
-    //             margin: 15,
-    //             dots: true,
-    //         },
-    //         1000: {
-    //             items: 2,
-    //             margin: 20,
-    //             dots: true,
-    //         },
-    //         1200: {
-    //             items: 3,
-    //             stagePadding: 30,
-    //             margin: 30,
-    //         }
-    //     }
-
-    // };
+   
   return (
       <>
-         <div className="doctor-slider mt-4">
-              {/* <OwlCarousel className="owl-theme" {...options}> */}
+         <div className="doctor-slider mt-4"> 
                <Swiper
-           //  autoplay={{ delay: 2500,  disableOnInteraction: false,}} 
+                //   autoplay={{
+                //       delay: 2500,
+                //     //   disableOnInteraction: false,
+                //   }} 
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay,]}
             onSwiper={(swiper) => console.log(swiper)}
             breakpoints={{

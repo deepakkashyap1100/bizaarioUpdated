@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-// import BookingAppointment from './BookingAppointment';
+import BookingAppointment from './BookingAppointment';
+
 
 const DocAppointTableContent = () => {
       const [selectedSpecialty, setSelectedSpecialty] = useState('');
@@ -61,20 +62,21 @@ const DocAppointTableContent = () => {
                    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div
                           className="modal-dialog modal-fullscreen"
-                          style={{ width: '90%',  }}
+                          // style={{ width: '90%',  }}
                       >
                 <div className="modal-content">
                 <div className="modal-header">
                     <h2 className="modal-title fs-5 text-center" id="exampleModalLabel">Choose Date and Time</h2>
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div className="modal-body">
-                   {/* <BookingAppointment/> */}
-                </div>
-                {/* <div className="modal-footer">
+                <div className="modal-footer pt-5">
                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" className="btn btn-primary">Save changes</button>
-                </div> */}
+                </div>
+                <div className="modal-body">
+                   <BookingAppointment/>
+                </div>
+                
                 </div>
             </div>
         </div>

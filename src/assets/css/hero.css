@@ -137,10 +137,33 @@ button.owl-next {
   max-width: 200px;
 }
 
+.hero-btns,
+.rounded-buttons {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+
+.hero-text {
+  padding-bottom: 40px;
+}
+
 @media screen and (max-width:768px) {
   .pill-button {
     padding: 15px 16px;
     max-width: 170px;
+  }
+
+  .hero-text {
+    padding-bottom: 20px;
+  }
+
+  .hero-btns,
+  .rounded-buttons {
+    /* display: flex; */
+    gap: 20px;
+    padding-bottom: 30px;
   }
 }
 
@@ -151,11 +174,7 @@ button.owl-next {
   line-height: 1.2;
 }
 
-.hero-btns,
-.rounded-buttons {
-  display: flex;
-  gap: 20px;
-}
+
 
 @media screen and (max-width: 991px) {
   .banner-bg {

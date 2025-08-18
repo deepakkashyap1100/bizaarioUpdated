@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import MedicalBoardCard2 from './MedicalBoardCard2';
 // import CardiologyTabContent from './MedicalBoardCard1';
 // import MedicalBoardCard2 from './MedicalBoardCard2';
-import MedicalBoardCard1 from './MedicalBoardCard1';
+
+
 // import MedicalBoardCard3 from './MedicalBoardCard3';
 
 
@@ -12,15 +14,15 @@ const renderContent = () => {
 switch (activeTab) {
   case 'tab1': return <div>
 
-    <MedicalBoardCard1 />
+    <MedicalBoardCard2 />
 
   </div>;
-case 'tab2': return  <div> <MedicalBoardCard1 />  </div>;
-case 'tab3': return <div>  <MedicalBoardCard1 /> </div>;
-case 'tab4': return <div>  <MedicalBoardCard1 /> </div>;
-case 'tab5': return <div>  <MedicalBoardCard1 /> </div>;
-case 'tab6': return <div>  <MedicalBoardCard1 /> </div>;
-case 'tab7': return <div>  <MedicalBoardCard1 /> </div>;
+case 'tab2': return  <div> <MedicalBoardCard2 />  </div>;
+case 'tab3': return <div>  <MedicalBoardCard2 /> </div>;
+case 'tab4': return <div>  <MedicalBoardCard2 /> </div>;
+case 'tab5': return <div>  <MedicalBoardCard2 /> </div>;
+case 'tab6': return <div>  <MedicalBoardCard2 /> </div>;
+case 'tab7': return <div>  <MedicalBoardCard2 /> </div>;
 return null;
 }
 };

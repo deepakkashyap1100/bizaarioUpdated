@@ -6,37 +6,48 @@ import award from  '../../assets/images/award.png'
 import crt2 from '../../assets/images/icons/crt2.png'
 import { Card } from 'react-bootstrap';
 import '../../assets/css/awards-certification.css'
-
-
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import { awardSliderData } from "../../Data/LocalData";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
+import { MdOutlineNavigateNext } from "react-icons/md";
+import { MdOutlineNavigateBefore } from "react-icons/md";
+
 const AwardsSlider2 = () => {
-    const singleItemForAllDevice = {
-        all: {
-            breakpoint: { max: 3000, min: 0 }, items: 1, 
-        }
-    }
+    const NextArrow = ({ onClick }) => (
+  <div className="slick-next-btn" onClick={onClick}>
+    <MdOutlineNavigateNext size={20} />
+  </div>
+    );
+    
+    const PrevArrow = ({ onClick }) => (
+  <div className="slick-prev-btn" onClick={onClick}>
+    <MdOutlineNavigateBefore  size={20}/>
+  </div>
+);
+
+
+     const settings = {
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2500,
+         arrows: true,
+     nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />
+    // centerMode: true,
+         //  centerPadding: "70px",  
+    // leftPadding:'40px',
+    
+  };
+
   return (
       <>
-         <Carousel
-            // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-            autoPlay={false}
-            // autoPlaySpeed={3000}
-            // transitionDuration={2000} 
-            //additionalTransfrom={-50 * 3}
-            //  pauseOnHover={false} 
-            containerClass="container p-0 " 
-            itemClass="px-2"   
-            arrows={true}
-            responsive={singleItemForAllDevice}
-            showDots={false}
-            infinite={true}  
-            renderDotsOutside={false} 
-            partialVisible={false}
-            centerMode={false}
-          >
+  <Slider {...settings}>
               {awardSliderData.map((item) => {
                   return (
                       <div className="award-certfication" key={item.id}>
@@ -77,7 +88,8 @@ const AwardsSlider2 = () => {
             </div>)
               })}
             
-        </Carousel>
+          </Slider>
+         
       </>
   )
 }

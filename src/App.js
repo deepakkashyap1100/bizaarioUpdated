@@ -22,7 +22,9 @@ import MedicalBoardPage from './pages/MedicalBoardPage';
 import NewsArticles from './pages/NewsArticles';
 import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import ArticleDetail from './components/ArticleDetail';
+import ArticleDetail from './components/news-article-page/ArticleDetail';
+import CardList from './components/test/CardList';
+import DetailCard from './components/test/DetailCard';
 // import { articleData } from './components/news-article-page/ArticleData';
 // import { cardsData } from './Data/LocalData';
 
@@ -68,6 +70,13 @@ export default function App() {
           element: <ArticleDetail />,
           // loader: cardsData
         },
+        {
+          path: '/test',
+          element: <CardList />,
+ 
+        },
+    
+        
 
       ]
     },

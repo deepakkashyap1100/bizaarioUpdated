@@ -29,7 +29,8 @@ const EmpoweringContent2 = () => {
       <>
           <div className="doctor-slider mt-4 position-relative">
                <Carousel
-                // removeArrowOnDeviceType={["tablet", "mobile"]}
+                //   removeArrowOnDeviceType={["tablet", "mobile"]}
+                  arrows={false} 
                 responsive={responsive}
                 // autoPlay={false}
                 // autoPlaySpeed={3000}
@@ -38,8 +39,7 @@ const EmpoweringContent2 = () => {
                 //  pauseOnHover={false} 
                 //  centerMode={false}
                 containerClass=" carousel-container" 
-                itemClass="pe-md-4 px-1"   
-                arrows={false} 
+                itemClass="pe-md-4 px-1"  
                 // showDots={false}
                 infinite={true}  
                 renderDotsOutside={true} 

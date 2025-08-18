@@ -15,12 +15,12 @@ const MedicalBoardPage = () => {
     const renderContent = () => {
     switch (activeTab) {
     case 'tab1': return <div className="row"><MedicalBoardContent/></div>;
-    case 'tab2': return  <div className="row">test</div>;
-    case 'tab3': return <div className="row">test</div>;
-    case 'tab4': return <div className="row">test</div>;
-    case 'tab5': return <div className="row">test</div>;
-    case 'tab6': return <div className="row">test</div>;
-    case 'tab7': return <div className="row">test</div>;
+    case 'tab2': return  <div className="row"><MedicalBoardContent/></div>;
+    case 'tab3': return <div className="row"><MedicalBoardContent/></div>;
+    case 'tab4': return <div className="row"><MedicalBoardContent/></div>;
+    case 'tab5': return <div className="row"><MedicalBoardContent/></div>;
+    case 'tab6': return <div className="row"><MedicalBoardContent/></div>;
+    case 'tab7': return <div className="row"><MedicalBoardContent/></div>;
     return null;
     }
     };

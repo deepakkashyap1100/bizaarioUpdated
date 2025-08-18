@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import AwardsSlider2 from './awards-certification/AwardsSlider2'; 
 import AwardsSlider from "./awards-certification/AwardsSlider";
+import AwardsSlider3 from "./awards-certification/AwardsSlider3";
 const Awards = () => { 
      
   return (
@@ -16,11 +17,17 @@ const Awards = () => {
                           </div> 
                       </div> 
                   </div>
+                   <div className="award-slider ">
                   <div className="row">
-                      {/* <AwardsSlider /> */}
-                      <AwardsSlider2 />
+                     
+                             {/* <AwardsSlider /> */}
+                            {/* <AwardsSlider2 /> */}
+                            <AwardsSlider3 />
+                      </div> 
+                        {/* <div style={{height:'100px'}}></div> */}
                   </div> 
               </div>
+             
           </section>
       </>
   )

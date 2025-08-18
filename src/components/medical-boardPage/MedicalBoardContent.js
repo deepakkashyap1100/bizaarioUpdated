@@ -38,7 +38,7 @@ const MedicalBoardContent = () => {
                                                 style={{color:'#73747e'}}>{item.Specializes}</span></div>
                                     </div>
                                 </div>
-                                <div className="d-flex pt-3 " style={{gap:'20px'}}>
+                                <div className="d-flex pt-3  " style={{gap:'20px'}}>
                                     <div>
                                         <a href="/" className="btn common-btn-dark  ">Book an Appointments</a>
                                     </div>

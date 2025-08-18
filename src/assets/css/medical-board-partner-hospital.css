@@ -77,3 +77,10 @@
 .cardiology-card img {
   width: 100%;
 }
+
+@media screen and (max-width:1200px) and (min-width:1024px) {
+  .common-btns-group1 {
+    display: flex;
+    flex-direction: column;
+  }
+}

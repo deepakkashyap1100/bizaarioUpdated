@@ -10,32 +10,32 @@ const [selectedCity, setSelectedCity] = useState('');
 
 const [activeTab, setActiveTab] = useState('tab1');
 
-const renderContent = () => {
-switch (activeTab) {
-case 'tab1': return <div>
-  <DocAppointTableContent />
-</div>;
-case 'tab2': return <div>
-  <DocAppointTableContent />
-</div>;
-case 'tab3': return <div>
-  <DocAppointTableContent />
-</div>;
-case 'tab4': return <div>
-  <DocAppointTableContent />
-</div>;
-case 'tab5': return <div>
-  <DocAppointTableContent />
-</div>;
-case 'tab6': return <div>
-  <DocAppointTableContent />
-</div>;
-case 'tab7': return <div>
-  <DocAppointTableContent />
-</div>;
-return null;
-}
-};
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'tab1': return <div>
+        <DocAppointTableContent />
+      </div>;
+      case 'tab2': return <div>
+        <DocAppointTableContent />
+      </div>;
+      case 'tab3': return <div>
+        <DocAppointTableContent />
+      </div>;
+      case 'tab4': return <div>
+        <DocAppointTableContent />
+      </div>;
+      case 'tab5': return <div>
+        <DocAppointTableContent />
+      </div>;
+      case 'tab6': return <div>
+        <DocAppointTableContent />
+      </div>;
+      case 'tab7': return <div>
+        <DocAppointTableContent />
+      </div>;
+        return null;
+    }
+  };
 
 // const specialties = ['Cardiology', 'Dermatology', 'Neurology'];
 const cities = ['Noida', 'Delhi', 'Mumbai'];

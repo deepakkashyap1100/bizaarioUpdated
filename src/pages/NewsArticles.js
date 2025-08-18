@@ -1,31 +1,33 @@
 import { useState } from 'react';
 import CommonBanner from '../UI/CommonBanner'
 import aboutBanner from '../assets/images/about/banner.png'
-import MedicalBoardContent from '../components/medical-boardPage/MedicalBoardContent';
-import NewsArticleList from '../components/news-article-page/NewsArticleList';
+// import MedicalBoardContent from '../components/medical-boardPage/MedicalBoardContent';
+// import NewsArticleList from '../components/news-article-page/ArticleListing';
+import ArticleListing from '../components/news-article-page/ArticleListing';
+import { cardsData } from '../Data/LocalData';
+import { NavLink } from 'react-router';
 
 const NewsArticles = () => {
+    const [activeCategory, setActiveCategory] = useState("all");
+
     const hospitalData =
     {
         banner: aboutBanner,
         title: 'News & Articles',
         desc: 'Empowering hospitals, physicians, and patients with real-time communication and clinical collaboration—because better care starts with better connection.'
     }
-    const [activeTab, setActiveTab] = useState('tab1');
+    const categories = [
+    { key: "cardiology", label: "Cardiology" },
+    { key: "orthopedics", label: "Orthopedics" },
+    { key: "pediatrics", label: "Pediatrics" },
+    { key: "neurology", label: "Neurology" },
+    { key: "obgyn", label: "Obstetrics & Gynecology" },
+    { key: "ent", label: "Otorhinolaryngology" },
+    { key: "plastic", label: "Plastic & Reconstructive" }
+    ];
+    const filteredCards =
+        activeCategory === "all" ? cardsData : cardsData.filter((card) => card.category === activeCategory); 
     
-    const renderContent = () => {
-        switch (activeTab) {
-            case 'tab1': return <div className="row"><NewsArticleList/></div>;
-            case 'tab2': return <div className="row"><NewsArticleList/></div>;
-            case 'tab3': return <div className="row"><NewsArticleList/></div>;
-            case 'tab4': return <div className="row"><NewsArticleList/></div>;
-            case 'tab5': return <div className="row"><NewsArticleList/></div>;
-            case 'tab6': return <div className="row"><NewsArticleList/></div>;
-            case 'tab7': return <div className="row"><NewsArticleList/></div>;
-                return null;
-        }
-    };
-
     return (
         <>
             <section>
@@ -36,53 +38,45 @@ const NewsArticles = () => {
                     <div className="row">
                         <div className="col-lg-8 col-12">
                             <h2 className='fw-semibold '>Read News & Articles</h2>
-                            <p className='light-color'>Empowering hospitals, physicians, and patients with real-time communication and clinical collaboration—because better care starts with better connection.</p>
+                            <p className='light-color'>Empowering hospitals, physicians, and patients with real-time
+                                communication and clinical collaboration—because better care starts with better
+                                connection.</p>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12"> 
-                        <div className=" medical-tab-buttons mb-4">
-                            <button className={`cutom-tab-style ${activeTab === 'tab1' ? 'activeTab' : 'gray-btn-style'}`} onClick={() =>
-                                setActiveTab('tab1')}>
-                                Cardiology
-                            </button>
-                            <button className={`cutom-tab-style ${activeTab === 'tab2' ? ' activeTab' : 'gray-btn-style'}`} onClick={() =>
-                                setActiveTab('tab2')}
-                            >
-                                Orthopedics
-                            </button>
-                            <button className={`cutom-tab-style ${activeTab === 'tab3' ? 'activeTab' : 'gray-btn-style'}`} onClick={() =>
-                                setActiveTab('tab3')}
-                            >
-                                Pediatrics
-                            </button>
-                            <button className={`cutom-tab-style ${activeTab === 'tab4' ? 'activeTab' : 'gray-btn-style'}`} onClick={() =>
-                                setActiveTab('tab4')}
-                            >
-                                Neurology
-                            </button>
-                            <button className={` cutom-tab-style ${activeTab === 'tab5' ? 'activeTab' : 'gray-btn-style'}`} onClick={() =>
-                                setActiveTab('tab5')}
-                            >
-                                Obstetrics & Gynecology
-                            </button>
-                            <button className={` cutom-tab-style ${activeTab === 'tab7' ? 'activeTab' : 'gray-btn-style'}`} onClick={() =>
-                                setActiveTab('tab7')}
-                            >
-                                Plastic & Reconstructive Surgery
-                            </button>
-                            <button className={` cutom-tab-style ${activeTab === 'tab6' ? 'activeTab' : 'gray-btn-style'}`} onClick={() =>
-                                setActiveTab('tab6')}
-                            >
-                                Otorhinolaryngology
-                            </button>
+                        <div className="col-12">
+                            {/* Tabs */}
+                            <div className="d-flex flex-wrap gap-md-4 gap-3 mb-4">
+                                {categories.map((cat) => (
+                                <button key={cat.key} className={`cutom-tab-style ${activeCategory===cat.key
+                                    ? "activeTab " : "tab-btn-style gray-btn-style" }`} onClick={()=>
+                                    setActiveCategory(cat.key)}
+                                    >
+                                    {cat.label}
+                                </button>
+                                ))}
                             </div>
-                        </div>    
+                        </div>
                     </div>
-                   
-                    <div style={{ padding: '15px', backgroundColor: '#dedfe6', borderRadius:'10px 10px 0 0'}} >{renderContent()}</div>
-                   
-                    
+                    <div className="content-style">
+                        <div className="row g-3">
+                            {filteredCards.map((card) => (
+                            <div className="col-lg-4 col-md-6 col-12 mb-md-0 mb-3" key={card.id}>
+                                <div className="card border-0 shadow-sm h-100 rounded-4 p-3">
+                                    <img src={card.img} className="card-img-top " alt={card.title} />
+                                    <div className="pt-3 article-list-content ">
+                                        <h4 className="fw-bold">{card.title}</h4>
+                                        <p className=" small mb-1 light-color d-inline">{card.desc} </p>
+                                         <NavLink className="country-card ms-4 fw-semi-bold read-more-btn  text-decoration-none d-inline"
+                                            to={`${card.id}`} state={card}>
+                                            Read More
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

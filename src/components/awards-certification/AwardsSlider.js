@@ -27,8 +27,8 @@ const AwardsSlider = () => {
             spaceBetween={0}
             slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
+            pagination={{ clickable: false }}
+            // scrollbar={{ draggable: false }}
             onSwiper={(swiper) => console.log(swiper)}
             //   onSlideChange={() =>{ }
         //        breakpoints={{

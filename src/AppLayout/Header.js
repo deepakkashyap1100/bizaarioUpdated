@@ -10,17 +10,37 @@ const Header = () => {
   const [expanded, setExpanded] = useState(false);
    const handleClose = () => setExpanded(false);
   const [scrollDown, setScrollDown] = useState(false);
+  // const [isSticky, setIsSticky] = useState(false);
 
-  window.onscroll = function() {
-    if (this.scrollY > 10) {
+      const handleScroll = () => {
+      // check scroll position
+      if (window.scrollY > 0) {
         setScrollDown(true);
-    } else{
-      setScrollDown(false);
-    }
-};
+      } else {
+        setScrollDown(false);
+      }
+    };
+  useEffect(() => { 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+//   window.onscroll = function() {
+//     if (this.scrollY > 10) {
+//         setScrollDown(true);
+//     } else{
+//       setScrollDown(false);
+//     }
+// };
   return (
     <>
-      <nav className={`navbar navbar-expand-xl navbar-light bg-white shadow-sm  main-navbar ${scrollDown==true?'headerfix': ''}`  } id='mainNavbar'>
+      <nav className={`navbar navbar-expand-xl navbar-light bg-white shadow-sm  main-navbar 
+      ${
+        scrollDown == true ? 'headerfix' : '' 
+        }`
+      }
+        id='mainNavbar'
+      >
       <div className="container">
           <div className="brand">
              <a className="navbar-brand d-flex align-items-center" href="/">

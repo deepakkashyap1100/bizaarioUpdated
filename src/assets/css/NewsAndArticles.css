@@ -11,8 +11,8 @@
   background-color: orange !important;
   border: none !important;
 }
-.news-section
-.card img {
+
+.news-section .card img {
   object-fit: cover;
   height: auto;
 }
@@ -20,25 +20,31 @@
 .card h6 {
   font-size: 1rem;
 }
-.content-style{
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #dedfe6;
+
+.content-style {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #dedfe6;
 }
-.card-img-top{
-    border-radius: 10px;
+
+.card-img-top {
+  border-radius: 10px;
 }
-.news-inner{
+
+.news-inner {
   /* display: flex;
   justify-content: space-between; */
   /* margin-bottom: 40px; */
 }
+
 @media screen and (min-width:991px) {
-  .news-inner{
-  display: flex;
-  justify-content: space-between;
+  .news-inner {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-}
-.tab-btn-style{
+
+.tab-btn-style {
   background-color: #e8e9f0;
 }
+
