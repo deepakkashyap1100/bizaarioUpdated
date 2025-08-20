@@ -4,7 +4,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import CommentSection from './article-inner/CommentSection';
 import ArticleLayout1 from './article-inner/ArticleLayout1';
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 
 const ArticleDetail = () => {
       const articleState = useLocation();

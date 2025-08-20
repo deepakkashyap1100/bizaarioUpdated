@@ -17,7 +17,7 @@ import socialIcon1 from '../assets/images/icons/social-icons/social.svg'
 import socialIcon2 from '../assets/images/icons/social-icons/social-1.svg'
 import socialIcon3 from '../assets/images/icons/social-icons/social-2.svg'
 import socialIcon4 from '../assets/images/icons/social-icons/social-3.svg'
-import { NavLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
 
 
 const Footer = () => {

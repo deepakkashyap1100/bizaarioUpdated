@@ -2,10 +2,7 @@ import './App.css'
 
 
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import 'react-multi-carousel/lib/styles.css';
 import "slick-carousel/slick/slick.css"; 
@@ -25,6 +22,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import ArticleDetail from './components/news-article-page/ArticleDetail';
 import CardList from './components/test/CardList';
 import DetailCard from './components/test/DetailCard';
+import BookingAppointment from './UI/BookingAppointment';
+import DateTimeSlotPicker from './UI/DateTimeSlotPicker';
 // import { articleData } from './components/news-article-page/ArticleData';
 // import { cardsData } from './Data/LocalData';
 
@@ -71,8 +70,8 @@ export default function App() {
           // loader: cardsData
         },
         {
-          path: '/test',
-          element: <CardList />,
+          path: '/test2',
+          element: <DateTimeSlotPicker />,
  
         },
     
@@ -82,9 +81,7 @@ export default function App() {
     },
 
   ]);
-  return (<RouterProvider 
-    router={router} future={{v7_startTransition: true, }} 
-  />
+  return (<RouterProvider router={router} />
 
 ) 
 }

@@ -3,8 +3,7 @@ import "../assets/css/NewsAndArticles.css";
 
 import React, { useState } from "react";
 import { cardsData } from "../Data/LocalData";
-import { Link } from "react-router";
-import { NavLink } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 
 

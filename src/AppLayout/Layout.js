@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Footer from './Footer';
-import { Outlet, useNavigation } from 'react-router';
+import { Outlet, useNavigation } from 'react-router-dom';
 import Header from './Header';
 import LoadingComp from './LoadingComp'
 const Layout = () => {

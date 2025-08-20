@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import article1 from '../../../assets/images/articles/article1.png'
 import { cardsData, relatedArticles } from "../../../Data/LocalData";
-import { NavLink, useParams } from "react-router";
+import { NavLink, useParams } from "react-router-dom";
 
 const ArticleLayout1 = ({articleSingleData}) => {
 

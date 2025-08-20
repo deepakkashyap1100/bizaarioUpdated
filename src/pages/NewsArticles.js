@@ -5,7 +5,7 @@ import aboutBanner from '../assets/images/about/banner.png'
 // import NewsArticleList from '../components/news-article-page/ArticleListing';
 import ArticleListing from '../components/news-article-page/ArticleListing';
 import { cardsData } from '../Data/LocalData';
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 const NewsArticles = () => {
     const [activeCategory, setActiveCategory] = useState("all");

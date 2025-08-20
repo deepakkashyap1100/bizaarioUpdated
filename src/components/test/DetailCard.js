@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router-dom';
 
 const DetailCard = () => {
     // const dataSingle = useParams();

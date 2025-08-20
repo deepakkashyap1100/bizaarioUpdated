@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, NavLink } from 'react-router'
+import { Link, NavLink } from 'react-router-dom'
 import langIcon from '../assets/images/icons/language.svg';
 import Logo from '../assets/images/logo1.png'; 
 import { AiOutlineMenu } from "react-icons/ai";

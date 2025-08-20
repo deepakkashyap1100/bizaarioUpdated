@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-    useRouteError,
-    NavLink,
-    useNavigate,
-
-} from 'react-router'
+import { useRouteError, NavLink, useNavigate } from 'react-router-dom'
 
 const ErrorComp = () => {
     const error = useRouteError();

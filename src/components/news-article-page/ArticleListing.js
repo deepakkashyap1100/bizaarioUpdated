@@ -1,6 +1,6 @@
 // import React, { useEffect } from 'react'
 import { cardsData } from '../../Data/LocalData'
-import { NavLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
 import '../../assets/css/NewsAndArticles.css'
 
 
